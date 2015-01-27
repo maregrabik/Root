@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en"
      xmlns="http://www.w3.org/1999/xhtml"
-     xmlns:f="http://java.sun.com/jsf/core"
      xmlns:h="http://java.sun.com/jsf/html"
      xmlns:ui="http://java.sun.com/jsf/facelets"
-     xmlns:p="http://primefaces.org/ui"
->
+     xmlns:p="http://primefaces.org/ui" 
+     xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Title</title>
     </h:head>
     <h:body>
         <p:layout fullPage="true">
             <p:layoutUnit position="north" size="100" header="Top">
-                <h:outputText value="Top unit content." />
+                <h:form  >
+	<h:panelGrid columns="2">
+		#{msg['lang.jsf']} : 
+		<h:selectOneMenu value="#{language.localeCode}" onchange="submit()"
+			valueChangeListener="#{language.countryLocaleCodeChanged}">
+                    <f:selectItems value="#{language.countriesInMap}" /> 
+   		</h:selectOneMenu>
+	</h:panelGrid>
+      </h:form>
             </p:layoutUnit>
 
             <p:layoutUnit position="south" size="100"  resizable="true" >
                 <h:outputText value="South unit content." />
             </p:layoutUnit>
 
-            <p:layoutUnit position="west" size="200" header="Left" resizable="true" >
+            <p:layoutUnit position="west" size="200" resizable="true" >
                 <h:form>
                     <p:growl id="messages" showDetail="false"/>
 
                       <p:menu>   
-                          <p:submenu label="Navigations">
-                              <p:menuitem value="Strona główna" url="Main.xhtml" icon="ui-icon-home"/>
+                          <p:submenu label="#{msg['navi.jsf']}">
+                              <p:menuitem value="#{msg['welcome.jsf']}" url="Main.xhtml" icon="ui-icon-home"/>
                           </p:submenu>
                       </p:menu>
                 </h:form>
