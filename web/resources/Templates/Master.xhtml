@@ -10,9 +10,9 @@
     </h:head>
     <h:body>
         <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="100" header="Top">
-                <h:form  >
-	<h:panelGrid columns="2">
+            <p:layoutUnit position="north" size="90" header="#{msg['marekHoraczyInfo.jsf']}">
+                <h:form   >
+	<h:panelGrid  columns="2"   style="float:right;margin-top: 4px" >
 		#{msg['lang.jsf']} : 
 		<h:selectOneMenu value="#{language.localeCode}" onchange="submit()"
 			valueChangeListener="#{language.countryLocaleCodeChanged}">
@@ -21,18 +21,17 @@
 	</h:panelGrid>
       </h:form>
             </p:layoutUnit>
-
             <p:layoutUnit position="south" size="100"  resizable="true" >
                 <h:outputText value="South unit content." />
             </p:layoutUnit>
 
-            <p:layoutUnit position="west" size="200" resizable="true" >
+            <p:layoutUnit position="west" size="250"  >
                 <h:form>
-                    <p:growl id="messages" showDetail="false"/>
-
+                    <p:growl id="messages" showDetail="false" />
                       <p:menu>   
                           <p:submenu label="#{msg['navi.jsf']}">
-                              <p:menuitem value="#{msg['welcome.jsf']}" url="Main.xhtml" icon="ui-icon-home"/>
+                              <p:menuitem  ajax="false" value="#{msg['main.jsf']}" action="index.xhtml" icon="ui-icon-home"/>
+                               <p:menuitem value="#{msg['myInfo.jsf']}" action="myInfo.xhtml" icon="ui-icon-comment"/>
                           </p:submenu>
                       </p:menu>
                 </h:form>
