@@ -16,16 +16,18 @@
                         value="#{msg['plid2.jsf']}" escape="false"  />
                 </h:panelGrid>
             </p:tab>
-            
+
             <p:tab title="POBYT v2">
                 <h:panelGrid columns="2" cellpadding="10">
                     <h:outputText
                         value="#{msg['pobyt1.jsf']}" escape="false"  />   <h:outputText value="  " />   
                     <h:panelGroup>
-                        <p:commandButton type="button" onclick="PF('switcher').previous();"
-                                         icon="ui-icon-circle-triangle-w" id="prev"/>
-                        <p:commandButton type="button" onclick="PF('switcher').next();"
-                                         icon="ui-icon-circle-triangle-e" id="next"/>
+                        <h:form> 
+                            <p:commandButton type="button" onclick="PF('switcher').previous();"
+                                             icon="ui-icon-circle-triangle-w" id="prev"/>
+                            <p:commandButton type="button" onclick="PF('switcher').next();"
+                                             icon="ui-icon-circle-triangle-e" id="next"/>
+                        </h:form> 
                         <p:imageSwitch effect="wipe" widgetVar="switcher" id="manuelSwitcher"
                                        slideshowAuto="false" >
                             <ui:repeat value="#{imagesView.images}" var="image" id="manuelSwitcherImages" >
@@ -38,9 +40,15 @@
                 </h:panelGrid>
             </p:tab>
             <p:tab title="P1">
-                <h:panelGrid columns="2" cellpadding="10" >
-                    <h:outputText value="After a break of more than 15 years..." />
+                <h:panelGrid columns="1" cellpadding="10" >
+                    <h:outputText
+                        value="#{msg['p11.jsf']}" escape="false"  />           
                 </h:panelGrid>
+                <h:panelGrid columns="1" cellpadding="10" style="display:block; text-align:center; margin: 0 auto" >
+                 <p:galleria value="#{imagesView.images}" var="image" panelWidth="900" panelHeight="600" showCaption="true">
+                        <p:graphicImage name="/images/#{image}" id="image" width="800" height="600" alt="#{imagesView.getDescription(image)}" title="#{image}"/>
+                    </p:galleria>
+                   </h:panelGrid>
             </p:tab>
         </p:tabView>
     </ui:define>
