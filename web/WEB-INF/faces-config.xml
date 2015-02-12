@@ -6,7 +6,7 @@
 
      <application>
      	   <locale-config>
-     	        <default-locale>en</default-locale>
+     	        <default-locale>EN</default-locale>
      	   </locale-config>
 	   <resource-bundle>
 		<base-name>resources.welcome</base-name>

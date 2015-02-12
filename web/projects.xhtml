@@ -45,8 +45,8 @@
                         value="#{msg['p11.jsf']}" escape="false"  />           
                 </h:panelGrid>
                 <h:panelGrid columns="1" cellpadding="10" style="display:block; text-align:center; margin: 0 auto" >
-                 <p:galleria value="#{imagesView.images}" var="image" panelWidth="900" panelHeight="600" showCaption="true">
-                        <p:graphicImage name="/images/#{image}" id="image" width="800" height="600" alt="#{imagesView.getDescription(image)}" title="#{image}"/>
+                 <p:galleria value="#{imagesView.imagesP1}" var="image" panelWidth="900" panelHeight="600" showCaption="true">
+                     <p:graphicImage name="/images/#{image}" id="image" width="800" height="600" alt="#{imagesView.getP1Description(image)}" title="SAS"/>
                     </p:galleria>
                    </h:panelGrid>
             </p:tab>
