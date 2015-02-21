@@ -1,10 +1,17 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-                template="./resources/Templates/Master.xhtml">
-
+                template="./resources/Templates/Master.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
     <ui:define name="content">
-        content
+       <h:panelGrid columns="1" cellpadding="10" style="display:block; text-align:center" >
+            <h:outputText value="#{msg['cert1.jsf']}" escape="false"  /> 
+              </h:panelGrid>
+ <h:panelGrid columns="1" cellpadding="10" style="display:block; text-align:center; margin: 0 auto" >
+            <p:galleria value="#{imagesView.imagesCert}" var="image" panelWidth="800" panelHeight="600" showCaption="true" >
+                <p:graphicImage name="/images/#{image}" id="image" width="800" height="600" alt="Certyficate" title=""/>
+            </p:galleria>
+        </h:panelGrid>
     </ui:define>
-
 </ui:composition>

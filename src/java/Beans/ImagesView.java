@@ -12,6 +12,7 @@ public class ImagesView {
 
     private List<String> images;
     private List<String> imagesP1;
+    private List<String> imagesCert;
 
     @PostConstruct
     public void init() {
@@ -23,6 +24,12 @@ public class ImagesView {
         for (int i = 1; i <= 2; i++) {
             imagesP1.add("p1" + i + ".jpg");
         }
+        
+         imagesCert = new ArrayList<String>();
+        for (int i = 1; i <= 5; i++) {
+            imagesCert.add("cert" + i + ".png");
+        }
+        
     }
 
     public List<String> getImages() {
@@ -32,13 +39,19 @@ public class ImagesView {
     public List<String> getImagesP1() {
         return imagesP1;
     }
+    
+     public List<String> getImagesCert() {
+        return imagesCert;
+    }
+     
 
     public String getP1Description(String s) {
 
+        //get locales
         Locale locale = FacesContext.getCurrentInstance().getViewRoot().getLocale();
-
-        System.out.print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.print(locale.toLanguageTag());
+        
+        //return picture description according to locales
+        //todo: change it to get it cia lang properties
         if (locale.toLanguageTag().equals("en")) {
 
             switch (s) {
