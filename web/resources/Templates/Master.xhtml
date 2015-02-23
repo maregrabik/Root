@@ -6,13 +6,14 @@
      xmlns:p="http://primefaces.org/ui" 
      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Title</title>
+        <title>Marek Horaczy</title>
+          <h:outputStylesheet name="/css/templateCSS.css" />
     </h:head>
-    <h:body>
-        <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="90" header="#{msg['marekHoraczyInfo.jsf']}">
-                <h:form   >
-	<h:panelGrid  columns="2"   style="float:right;margin-top: 4px" >
+    <h:body id="wrap">
+        <p:layout >
+            <p:layoutUnit header="Marek Horaczy" position="north" size="90" >
+                <h:form style="color:  #ffffff">
+                    <h:panelGrid columns="2"   style="float:right;margin-top: 4px" >
 		#{msg['lang.jsf']} : 
 		<h:selectOneMenu value="#{language.localeCode}" onchange="submit()"
 			valueChangeListener="#{language.countryLocaleCodeChanged}">
@@ -21,19 +22,18 @@
 	</h:panelGrid>
       </h:form>
             </p:layoutUnit>
-            <p:layoutUnit position="south" size="100"  resizable="true" >
-                <h:outputText value="South unit content." />
-            </p:layoutUnit>
+         
 
-            <p:layoutUnit position="west" size="250"  >
-                <h:form>
+            <p:layoutUnit position="west" size="250" >
+                <h:form  >
                     <p:growl id="messages" showDetail="false" />
                       <p:menu>   
                           <p:submenu label="#{msg['navi.jsf']}">
                               <p:menuitem  value="#{msg['main.jsf']}" action="index.xhtml" icon="ui-icon-home"/>
                                <p:menuitem value="#{msg['myInfo.jsf']}" action="myInfo.xhtml" icon="ui-icon-comment"/>
                                 <p:menuitem value="#{msg['projectsH.jsf']}" action="projects.xhtml" icon="ui-icon-bookmark"/>
-                                 <p:menuitem value="#{msg['certM.jsf']}" action="certificates.xhtml" icon="ui-icon-bookmark"/>
+                                 <p:menuitem value="#{msg['certM.jsf']}" action="certificates.xhtml" icon="ui-icon-mail-open"/>
+                                  <p:menuitem value="Code" action="code.xhtml" icon="ui-icon-script"/>
                           </p:submenu>
                       </p:menu>
                 </h:form>
@@ -43,9 +43,15 @@
                 <h:outputText value="Right unit content." />
             </p:layoutUnit>-->
 
-            <p:layoutUnit position="center">
+<p:layoutUnit id="content"  position="center"  >
                 <ui:insert name="content">Put default content here, if any.</ui:insert>
             </p:layoutUnit>
+
+
+<h:panelGrid id="footer">
+                <h:outputText value="Marek Horaczy @site " />
+              </h:panelGrid>
+           
         </p:layout>
     </h:body>
 </html>

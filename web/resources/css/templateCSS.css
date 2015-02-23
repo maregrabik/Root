@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-02-22, 09:19:12
+    Author     : Marek
+*/
+
+.ui-layout, .ui-layout-doc, .ui-layout-unit, .ui-layout-wrap, .ui-layout-bd, .ui-layout-hd{
+    border: none;
+
+}
+.ui-layout-north  .ui-widget-content{
+    text-align: center;
+    background-image: url(../images/header.jpg);
+    font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+    height: 140px;
+    background:  #000000;
+    background-size: 100% 100%;
+
+}
+
+.ui-layout-north .ui-layout-unit-header .ui-widget-header ui-corner-all{
+    text-align: center;
+    background-image: url(../images/header.jpg);
+    font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+    height: 140px;
+    background:  #000000;
+    background-size: 100% 100%;
+}
+/*ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-south ui-layout-pane ui-layout-pane-south*/
+#footer{
+    position: fixed; bottom: 0 !important;
+    background:  #000000;
+    background-image: url("../images/header.jpg");
+    background-size: 100% 100%;
+    height: 40px;
+    width: 1200px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#wrap{
+    width: 1200px;
+    margin: 20px auto;
+}
+
+#content{
+    width: 1200px;
+    height: 800px;
+    margin: 20px auto;
+}
+
+
+
+
