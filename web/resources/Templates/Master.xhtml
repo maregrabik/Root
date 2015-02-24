@@ -11,12 +11,12 @@
     </h:head>
     <h:body id="wrap">
         <p:layout >
-            <p:layoutUnit header="Marek Horaczy" position="north" size="90" >
-                <h:form style="color:  #ffffff">
+            <p:layoutUnit  header="Marek Horaczy" position="north" size="90"  >
+                <h:form  style="color:  #ffffff">
                     <h:panelGrid columns="2"   style="float:right;margin-top: 4px" >
 		#{msg['lang.jsf']} : 
 		<h:selectOneMenu value="#{language.localeCode}" onchange="submit()"
-			valueChangeListener="#{language.countryLocaleCodeChanged}">
+			valueChangeListener="#{language.countryLocaleCodeChanged}" >
                     <f:selectItems value="#{language.countriesInMap}" /> 
    		</h:selectOneMenu>
 	</h:panelGrid>

@@ -13,6 +13,7 @@ public class ImagesView {
     private List<String> images;
     private List<String> imagesP1;
     private List<String> imagesCert;
+    public List<String> imagesCar;
 
     @PostConstruct
     public void init() {
@@ -28,6 +29,11 @@ public class ImagesView {
          imagesCert = new ArrayList<String>();
         for (int i = 1; i <= 5; i++) {
             imagesCert.add("cert" + i + ".png");
+        }
+        
+           imagesCar = new ArrayList<String>();
+        for (int i = 1; i <= 5; i++) {
+            imagesCar.add("carShop" + i + ".png");
         }
         
     }
@@ -74,5 +80,19 @@ public class ImagesView {
             }
         }
     return "it's a picture of thousand sunsets";
+    }
+
+    /**
+     * @return the imagesCar
+     */
+    public List<String> getImagesCar() {
+        return imagesCar;
+    }
+
+    /**
+     * @param imagesCar the imagesCar to set
+     */
+    public void setImagesCar(List<String> imagesCar) {
+        this.imagesCar = imagesCar;
     }
 }

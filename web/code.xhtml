@@ -7,12 +7,21 @@
 
     <ui:define name="content">
       <p:tabView orientation="left">
-        <p:tab title="My site">
-            <h:panelGrid columns="2" cellpadding="10">     
+        <p:tab title="#{msg['codeM.jsf']}">
+            <h:panelGrid columns="1" cellpadding="10" style=" text-align:  center">    
+            <h:outputText value="#{msg['codeMySite1.jsf']}" escape="false"/> 
+            <h:outputLink value="https://github.com/maregrabik/Root">Source on GitHub!</h:outputLink>
             </h:panelGrid>
         </p:tab>
-        <p:tab title="CarShop">
-            <h:panelGrid columns="2" cellpadding="10">
+        <p:tab title="#{msg['codeC.jsf']}">
+            <h:panelGrid columns="1" cellpadding="10">
+            <h:outputText value="#{msg['codeC1.jsf']}" escape="false"/> 
+            <h:outputLink value="https://github.com/maregrabik/CarWorkshop">Source on GitHub!</h:outputLink>
+             <h:outputText value="Jar download: " escape="false"/> 
+            <p:galleria value="#{imagesView.imagesCar}" var="image" panelWidth="600" panelHeight="400" showCaption="true" >
+                <p:graphicImage name="/images/#{image}" id="image" width="600" height="400" alt="Certyficate" title=""/>
+            </p:galleria>
+            
             </h:panelGrid>
         </p:tab>
         <p:tab title="BookShop">

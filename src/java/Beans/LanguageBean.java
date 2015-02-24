@@ -37,7 +37,9 @@ public class LanguageBean implements Serializable{
  
  
 	public String getLocaleCode() {
-		return localeCode;
+           String x = FacesContext.getCurrentInstance()
+        			.getViewRoot().getLocale().toLanguageTag();
+		return x;
 	}
  
  
