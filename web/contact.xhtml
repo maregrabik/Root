@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./resources/Templates/Master.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="content">
+     <p:fieldset legend="Informations">
+    <h:panelGrid columns="2" width="500" border="1" >
+    <h:outputText value="#{msg['contact1.jsf']}"  />
+    <h:outputText value="+48 609 756 300"/>
+    <h:outputText value="Mail:"     />
+    <h:outputText value="horaczy.marek@gmail.com" />
+    <h:outputText value="#{msg['contact2.jsf']}     " />
+    <h:outputText value="Zielona Góra, Poland" />           
+    </h:panelGrid>
+    </p:fieldset>
+    </ui:define>
+
+</ui:composition>
