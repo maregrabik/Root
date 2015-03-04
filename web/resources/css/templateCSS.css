@@ -43,12 +43,12 @@ and open the template in the editor.
 }
 
 #wrap{
-    width: 1200px;
+    width: 1400px;
     margin: 20px auto;
 }
 
 #content{
-    width: 1200px;
+    width: 1400px;
     height: 1200px ;
     margin: 20px auto;
 }
