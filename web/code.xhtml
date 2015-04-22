@@ -26,7 +26,6 @@
                         </p:commandButton>
                     </h:form>
 
-
                     <p:galleria value="#{imagesView.imagesCar}" var="image" panelWidth="600" panelHeight="400" showCaption="true" >
                         <p:graphicImage name="/images/#{image}" id="image" width="600" height="400" alt="Certyficate" title=""/>
                     </p:galleria>
@@ -36,9 +35,11 @@
             <p:tab title="BookShop">
                 <h:panelGrid columns="1" cellpadding="10">
                     <h:outputText value="#{msg['shop1.jsf']}" escape="false"/> 
-                    <h:outputLink value="https://github.com/maregrabik/Sklep">Source on GitHub!</h:outputLink>
+                    <h:outputLink value="http://marek-horaczy.rhcloud.com/BookStore/">External link to application!</h:outputLink>
                      <h:outputText value="#{msg['shop2.jsf']}" escape="false"/> 
-                    
+                     <h:outputLink value="https://github.com/maregrabik/JSFAjaxHibernateBookStore.git">Source on GitHub!</h:outputLink>
+                      <h:outputText value="Databse schema:" escape="false"/> 
+                      <p:graphicImage name="images/book_store_schema.png"  width="600" height="400"/>                 
                 </h:panelGrid>
             </p:tab>
         </p:tabView>
